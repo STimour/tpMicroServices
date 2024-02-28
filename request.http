@@ -1,0 +1,42 @@
+###
+POST http://localhost:3000/voitures/
+Content-Type: application/json
+
+{
+  "marque": "Toyota",
+  "modele": "CHR",
+  "annee": "2023",
+  "couleur": "rouge"
+}
+
+###
+GET http://localhost:3000/voitures
+
+### Register User
+POST http://localhost:3000/user
+Content-Type: application/json
+
+{
+  "username": "Tim",
+  "email": "tim@tim.com",
+  "password": "3151445"
+}
+
+###
+POST http://localhost:3000/user
+Content-Type: application/json
+
+{
+  "username": "Tim",
+  "email": "tim@tom.com",
+  "password": "3151445"
+}
+
+### Connexion User
+POST http://localhost:8000/connexion
+Content-Type: application/json
+
+{
+  "identifier": "tom@tom.com",
+  "password": "3151445"
+}

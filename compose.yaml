@@ -1,0 +1,16 @@
+services:
+  service:
+    image: tim/api-gateway
+    build: ./apiGateway
+    command: node index.js
+    ports:
+      - "3000:3000"
+    restart: always  
+
+  api:
+    image: tim/node-api
+    build: ./nodeApi
+    command: node dist/index.js
+    ports:
+      - "3030:3030"
+    restart: always  
